@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service                                                             
+metadata:                                                                 
+  name: gabriella-nginx-demo
+  labels:
+    app: gabriella-nginx-demo
+spec:
+  type: ClusterIP
+  ports:
+  - port: 80
+    targetPort: 5000
+    protocol: TCP
+  selector:
+    app: gabriella-nginx-demo
